@@ -10,6 +10,7 @@
             background-color: #f4f6f9;
             margin: 0;
             padding: 0;
+            transition: background-color 0.3s ease;
         }
         .container {
             width: 80%;
@@ -19,28 +20,54 @@
             border: 2px solid #007bff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center; /* Center text within the container */
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s forwards; /* Fade-in animation */
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         h1 {
             color: #007bff;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        h1:hover {
+            color: #0056b3; /* Darker color on hover */
+        }
+        h2 {
+            color: #007bff;
+            font-size: 2em;
+            margin-top: 20px;
+            transition: transform 0.3s; /* Animation for h2 */
+        }
+        h2:hover {
+            transform: scale(1.05); /* Scale effect on hover */
         }
         p, ul {
             font-size: 1.1em;
             line-height: 1.6em;
             margin: 0;
             padding: 10px 0;
+            transition: transform 0.3s ease; /* Animation for paragraphs */
         }
-        ul {
-            padding-left: 20px;
-            list-style-position: inside; /* Adjusts list bullet position */
+        p:hover {
+            transform: scale(1.02); /* Slight scale on hover */
         }
         .link a {
             color: #007bff;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s, transform 0.3s; /* Animation for links */
         }
         .link a:hover {
             text-decoration: underline;
+            color: #e67e22;
+            transform: scale(1.1); /* Scale on hover */
         }
         .profile-picture {
             text-align: center;
@@ -51,18 +78,22 @@
             height: 150px;
             border-radius: 50%;
             border: 2px solid #007bff;
+            transition: transform 0.3s; /* Animation for profile image */
+        }
+        .profile-picture img:hover {
+            transform: scale(1.1);
         }
         table {
-            width: 100%;
+            width: 80%;
+            margin: 20px auto;
             border-collapse: collapse;
-            margin: 20px 0;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
+            transition: transform 0.3s ease; /* Animation for table */
         }
         th, td {
             padding: 10px;
             text-align: center;
+            border: 1px solid #ddd;
+            transition: background-color 0.3s; /* Animation for table cells */
         }
         th {
             background-color: #007bff;
@@ -74,40 +105,32 @@
         tr:nth-child(odd) {
             background-color: #ffffff;
         }
+        tr:hover {
+            background-color: #e1f5fe; /* Highlight on row hover */
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Ronaldo Coc</h1>
         <p>San Antonio, Toledo, Belize</p>
-        <p>Student at University of Belize </p>
+        <p>Student at University of Belize</p>
         
         <div class="profile-picture">
-            <img src="download1.jpg" alt="djrj7">
-			
+            <img src="download1.jpg" alt="Profile Picture">
         </div>
         
-        <p>About Me:</p>
-        <p>Hello! My name is Ronaldo Coc. I am enrolled in the Faculty of Science and Technology as a full time student and I am aiming to pursue a Associates Degree  in Information Technology.
-
- I believe this course will be helpful to prepare me for my future career by developing practical experience leading me to career versatility.
-
-A fun fact about me is that love playing sports with football being the favorite and storing a collection of songs that I can use at any event.
-
-</p>
-        
+        <h2>About Me:</h2>
+        <p>Hello! My name is Ronaldo Coc. I am enrolled in the Faculty of Science and Technology as a full-time student aiming to pursue an Associate's Degree in Information Technology. I believe this course will be helpful to prepare me for my future career by developing practical experience leading me to career versatility. A fun fact about me is that I love playing sports, with football being my favorite, and I enjoy collecting songs for any event.</p>
         
         <div class="link">
             <a href="https://yourlink.com/">Visit My Website</a>
         </div>
-	
-        <img src="download.jpeg" alt="University of Belize">
-
         
-     
-    <div style="padding: 20px;">
-        <h2 style="color: #007bff; font-size: 2em; text-align: center;">My Class Schedule</h2>
-        <table border="1" cellpadding="10" cellspacing="0" width="80%" style="background-color: #ffffff; border-collapse: collapse; margin: 0 auto; font-size: 1.1em;">
+        <img src="download.jpeg" alt="University of Belize" style="margin-top: 20px; width: 300px; border-radius: 10px;">
+        
+        <h2>My Class Schedule</h2>
+        <table>
             <tr style="background-color: #f39c12; color: white;">
                 <th>Day</th>
                 <th>Time</th>
@@ -131,7 +154,7 @@ A fun fact about me is that love playing sports with football being the favorite
                 <td>3:30 pm - 4:45 pm</td>
                 <td>Algebra</td>
                 <td>JAB - D1</td>
-				 </tr>
+		    </tr>
             <tr>
                 <td></td>
                 <td>5:30 pm - 6:45 pm</td>
@@ -187,13 +210,13 @@ A fun fact about me is that love playing sports with football being the favorite
                 <td>Trigonometery</td>
                 <td>JAB - D1</td>
  
-        </table>
+	 </table>
     </div>
-
-
-                </tr>
+	
+	   </tr>
             </tbody>
         </table>
     </div>
+	
 </body>
 </html>
